@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <Appenders>
+        <File name="log" fileName="target/trace.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+        <File name="errorLog" fileName="target/error.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.nixsolutions" level="trace">
+            <AppenderRef ref="log" level="trace"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="errorLog" level="error"/>
+        </Root>
+    </Loggers>
+</Configuration>

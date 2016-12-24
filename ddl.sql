@@ -1,0 +1,159 @@
+CREATE TABLE role
+(
+	role_id INT IDENTITY,
+	user_role VARCHAR(30) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE city
+(
+	city_id INT IDENTITY,
+	city_name VARCHAR(30) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE street
+(
+	street_id BIGINT IDENTITY,
+	street_name VARCHAR(256) NOT NULL UNIQUE,
+	city_id INT NOT NULL,
+	FOREIGN KEY (city_id) REFERENCES city (city_id)
+);
+
+
+CREATE TABLE address
+(
+	address_id BIGINT IDENTITY,
+	street_id BIGINT NOT NULL,
+	house_number VARCHAR(8) NOT NULL,
+	flat_number VARCHAR(6) NOT NULL,
+	FOREIGN KEY (street_id) REFERENCES street (street_id)
+);
+
+
+CREATE TABLE document_type
+(
+	document_type_id INT IDENTITY,
+	document_type VARCHAR(40) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE document
+(
+	document_id INT IDENTITY,
+	document_type_id INT NOT NULL,
+	series VARCHAR(3) NOT NULL,
+	number INT NOT NULL,
+	issued_by VARCHAR(256) NOT NULL,
+	date_of_issue DATE NOT NULL,
+	document_image CLOB NOT NULL,
+	FOREIGN KEY (document_type_id) REFERENCES document_type (document_type_id)
+);
+
+
+CREATE TABLE user
+(
+	user_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL,
+	email VARCHAR(256) NOT NULL,
+	password VARCHAR(30) NOT NULL,
+	phone_number VARCHAR(13) NOT NULL UNIQUE,
+	karma INT NOT NULL DEFAULT 0,
+	document_id INT NOT NULL,
+	role_id INT NOT NULL DEFAULT 1,
+	address_id INT NOT NULL,
+	FOREIGN KEY (document_id) REFERENCES document (document_id),
+	FOREIGN KEY (role_id) REFERENCES role (role_id),
+	FOREIGN KEY (address_id) REFERENCES address (address_id)
+);
+
+
+CREATE TABLE language
+(
+	language_id INT IDENTITY,
+	language VARCHAR(30) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE genre
+(
+	genre_id INT IDENTITY,
+	genre VARCHAR(30) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE publishing_house
+(
+	publishing_house_id INT IDENTITY,
+	publishing_house_name VARCHAR(80) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE author
+(
+	author_id INT IDENTITY,
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL
+);
+
+
+CREATE TABLE shelf
+(
+	shelf_id INT IDENTITY,
+	shelf_number INT NOT NULL UNIQUE
+);
+
+
+CREATE TABLE order_type
+(
+	order_type_id INT IDENTITY,
+	order_type VARCHAR(50) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE book
+(
+	book_id BIGINT IDENTITY,
+	book_name VARCHAR(256) NOT NULL,
+	author_id INT NOT NULL,
+	publishing_house_id INT NOT NULL,
+	genre_id INT NOT NULL,
+	year_of_issue INT NOT NULL,
+	language_id INT NOT NULL,
+	book_description CLOB NOT NULL,
+	book_quantity INT NOT NULL,
+	book_in_warehouse INT NOT NULL,
+	shelf_id INT NOT NULL,
+	book_rate INT NOT NULL DEFAULT 0,
+	number_of_readings INT NOT NULL DEFAULT 0,
+	FOREIGN KEY (author_id) REFERENCES author (author_id),
+	FOREIGN KEY (publishing_house_id) REFERENCES publishing_house (publishing_house_id),
+	FOREIGN KEY (genre_id) REFERENCES genre (genre_id),
+	FOREIGN KEY (language_id) REFERENCES language (language_id),
+	FOREIGN KEY (shelf_id) REFERENCES shelf (shelf_id)
+);
+
+
+CREATE TABLE "order"
+(
+	order_id BIGINT IDENTITY,
+	user_id BIGINT NOT NULL,
+	librarian_id BIGINT NOT NULL,
+	book_id BIGINT NOT NULL,	
+	order_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	expected_return_date DATE NOT NULL,
+	actual_return_date DATE,
+	order_type_id INT NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES user (user_id),
+	FOREIGN KEY (librarian_id) REFERENCES user (user_id),
+	FOREIGN KEY (book_id) REFERENCES book (book_id),
+	FOREIGN KEY (order_type_id) REFERENCES order_type (order_type_id)
+);
+
+ALTER TABLE author 
+ADD COLUMN patronymic VARCHAR(30);
+
+ALTER TABLE "order"
+RENAME TO "ORDER";
+
