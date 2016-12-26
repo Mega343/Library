@@ -10,9 +10,9 @@ public interface ShelfDAO {
 
     public void edit(Shelf shelf);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Shelf getShelf(int id);
+    public Shelf getShelf(Integer id);
 
-    public List<Shelf> getAllShelfs();
+    public List<Shelf> getAllShelves();
 }

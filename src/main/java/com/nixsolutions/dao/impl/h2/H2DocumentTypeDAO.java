@@ -6,6 +6,7 @@ import com.nixsolutions.dao.DocumentTypeDAO;
 import java.util.List;
 
 public class H2DocumentTypeDAO implements DocumentTypeDAO {
+
     @Override
     public int add(DocumentType docType) {
         return 0;
@@ -17,12 +18,12 @@ public class H2DocumentTypeDAO implements DocumentTypeDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public DocumentType getDocumentType(int id) {
+    public DocumentType getDocumentType(Integer id) {
         return null;
     }
 

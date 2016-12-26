@@ -17,12 +17,12 @@ public class H2RoleDAO implements RoleDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Role getRole(int id) {
+    public Role getRole(Integer id) {
         return null;
     }
 

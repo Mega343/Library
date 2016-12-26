@@ -17,12 +17,12 @@ public class H2GenreDAO implements GenreDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Genre getGere(int id) {
+    public Genre getGenre(Integer id) {
         return null;
     }
 

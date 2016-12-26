@@ -13,19 +13,6 @@ public class User {
     private Integer roleID;
     private Integer addressID;
 
-    public User(Long userID, String firstName, String lastName, String email, String password, String phoneNumber,
-                Integer karma, Integer documentID, Integer roleID, Integer addressID) {
-        this.userID = userID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        this.karma = karma;
-        this.documentID = documentID;
-        this.roleID = roleID;
-        this.addressID = addressID;
-    }
 
     public Long getUserID() {
         return userID;
@@ -105,5 +92,20 @@ public class User {
 
     public void setAddressID(Integer addressID) {
         this.addressID = addressID;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", karma=" + karma +
+                ", documentID=" + documentID +
+                ", roleID=" + roleID +
+                ", addressID=" + addressID +
+                '}';
     }
 }

@@ -10,21 +10,21 @@ public interface BookDAO {
 
     public void edit(Book book);
 
-    public void delete(int id);
+    public void delete(Long id);
 
-    public Book getBook(int id);
+    public Book getBook(Long id);
 
-    public List<Book> searchByAuthor(int id);
+    public List<Book> searchByAuthor(Integer id);
 
     public List<Book> searchByBookName(String bookName);
 
-    public List<Book> searchByPublishingHouse(int id);
+    public List<Book> searchByPublishingHouse(Integer id);
 
-    public List<Book> searchByGenre(int id);
+    public List<Book> searchByGenre(Integer id);
 
-    public List<Book> searchByRateGreaterThan(int rate);
+    public List<Book> searchByRateGreaterThan(Integer rate);
 
-    public List<Book> searchByReadingsGreaterThan(int rate);
+    public List<Book> searchByReadingsGreaterThan(Integer rate);
 
     public List<Book> getAllBooks();
 }

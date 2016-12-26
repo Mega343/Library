@@ -4,7 +4,7 @@ import com.nixsolutions.dao.impl.h2.H2DAOFactory;
 
 public abstract class DAOFactory {
 
-    private static final int H2 = 1;
+    public static final int H2 = 1;
 
     public abstract AddressDAO getAddressDAO();
 

@@ -26,6 +26,7 @@ public class CreateSchemaApp {
 
         try {
             String[] properties = reader.getProperties(FILE_PROPERTIES);
+            Class.forName("org.h2.Driver");
             LOG.info("Open connection to database.");
             connection = DriverManager.getConnection(properties[0], properties[1], properties[2]);
             LOG.info("Connection open successful.");

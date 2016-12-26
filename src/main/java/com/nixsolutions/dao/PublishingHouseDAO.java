@@ -10,9 +10,9 @@ public interface PublishingHouseDAO {
 
     public void edit(PublishingHouse ph);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public PublishingHouse getPublishingHouse(int id);
+    public PublishingHouse getPublishingHouse(Integer id);
 
     public List<PublishingHouse> getAllPublishingHouses();
 }

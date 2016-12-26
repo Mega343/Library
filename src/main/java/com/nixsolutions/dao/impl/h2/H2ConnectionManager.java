@@ -13,7 +13,6 @@ public class H2ConnectionManager {
     private static final int CONNECTION_PULL_SIZE = 10;
     private static final int LOGIN_TIMEOUT = 100;
 
-
     private H2ConnectionManager() {
     }
 
@@ -25,12 +24,11 @@ public class H2ConnectionManager {
                     connectionPool = JdbcConnectionPool.create(url, login, password);
                     connectionPool.setMaxConnections(CONNECTION_PULL_SIZE);
                     connectionPool.setLoginTimeout(LOGIN_TIMEOUT);
-                    LOG.info("Connection pull was initialize.");
+                    LOG.info("Connection pull was initialized.");
                 }
             }
         }
-        LOG.info("Connection return");
-        System.out.println("Active connections: " + connectionPool.getActiveConnections());
+        LOG.info("Connection return. Active connections: " + connectionPool.getActiveConnections());
         return connectionPool.getConnection();
     }
 }

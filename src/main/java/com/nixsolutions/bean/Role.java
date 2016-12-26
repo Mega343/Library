@@ -5,10 +5,6 @@ public class Role {
     private Integer roleID;
     private String userRole;
 
-    public Role(Integer roleID, String userRole) {
-        this.roleID = roleID;
-        this.userRole = userRole;
-    }
 
     public Integer getRoleID() {
         return roleID;

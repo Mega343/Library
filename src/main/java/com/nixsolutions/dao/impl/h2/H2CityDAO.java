@@ -17,12 +17,12 @@ public class H2CityDAO implements CityDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public City getCity(int id) {
+    public City getCity(Integer id) {
         return null;
     }
 

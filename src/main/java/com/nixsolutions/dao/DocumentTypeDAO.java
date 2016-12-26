@@ -11,9 +11,9 @@ public interface DocumentTypeDAO {
 
     public void edit(DocumentType docType);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public DocumentType getDocumentType(int id);
+    public DocumentType getDocumentType(Integer id);
 
     public List<DocumentType> getAllDocumentTypes();
 }

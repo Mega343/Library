@@ -17,12 +17,12 @@ public class H2StreetDAO implements StreetDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Street getStreet(int id) {
+    public Street getStreet(Integer id) {
         return null;
     }
 

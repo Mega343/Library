@@ -8,8 +8,8 @@ public interface AddressDAO {
 
     public void edit(Address address);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Address getAddress(int id);
+    public Address getAddress(Integer id);
 
 }

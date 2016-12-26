@@ -17,17 +17,17 @@ public class H2BookDAO implements BookDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
 
     }
 
     @Override
-    public Book getBook(int id) {
+    public Book getBook(Long id) {
         return null;
     }
 
     @Override
-    public List<Book> searchByAuthor(int id) {
+    public List<Book> searchByAuthor(Integer id) {
         return null;
     }
 
@@ -37,22 +37,22 @@ public class H2BookDAO implements BookDAO {
     }
 
     @Override
-    public List<Book> searchByPublishingHouse(int id) {
+    public List<Book> searchByPublishingHouse(Integer id) {
         return null;
     }
 
     @Override
-    public List<Book> searchByGenre(int id) {
+    public List<Book> searchByGenre(Integer id) {
         return null;
     }
 
     @Override
-    public List<Book> searchByRateGreaterThan(int rate) {
+    public List<Book> searchByRateGreaterThan(Integer rate) {
         return null;
     }
 
     @Override
-    public List<Book> searchByReadingsGreaterThan(int rate) {
+    public List<Book> searchByReadingsGreaterThan(Integer rate) {
         return null;
     }
 

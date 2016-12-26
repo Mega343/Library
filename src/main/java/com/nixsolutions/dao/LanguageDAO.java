@@ -10,9 +10,9 @@ public interface LanguageDAO {
 
     public void edit(Language language);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Language getLanguage(int id);
+    public Language getLanguage(Integer id);
 
     public List<Language> getAllLanguages();
 }

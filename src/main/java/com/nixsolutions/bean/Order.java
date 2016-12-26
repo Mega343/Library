@@ -14,28 +14,6 @@ public class Order {
     private Date actualReturnDate;
     private Integer orderTypeID;
 
-    public Order(Long orderID, Long userID, Long librarianID, Long bookID, Timestamp orderDate,
-                 Date expectedReturnDate, Date actualReturnDate, Integer orderTypeID) {
-        this.orderID = orderID;
-        this.userID = userID;
-        this.librarianID = librarianID;
-        this.bookID = bookID;
-        this.orderDate = orderDate;
-        this.expectedReturnDate = expectedReturnDate;
-        this.actualReturnDate = actualReturnDate;
-        this.orderTypeID = orderTypeID;
-    }
-
-    public Order(Long orderID, Long userID, Long librarianID, Long bookID, Timestamp orderDate,
-                 Date expectedReturnDate, Integer orderTypeID) {
-        this.orderID = orderID;
-        this.userID = userID;
-        this.librarianID = librarianID;
-        this.bookID = bookID;
-        this.orderDate = orderDate;
-        this.expectedReturnDate = expectedReturnDate;
-        this.orderTypeID = orderTypeID;
-    }
 
     public Long getOrderID() {
         return orderID;

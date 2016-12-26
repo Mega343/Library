@@ -8,8 +8,8 @@ public interface DocumentDAO {
 
     public void edit(Document document);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Document getDocument(int id);
+    public Document getDocument(Integer id);
 
 }

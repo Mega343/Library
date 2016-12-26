@@ -7,18 +7,6 @@ public class Author {
     private String lastName;
     private String patronymic;
 
-    public Author(Integer authorID, String firstName, String lastName, String patronymic) {
-        this.authorID = authorID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.patronymic = patronymic;
-    }
-
-    public Author(Integer authorID, String firstName, String lastName) {
-        this.authorID = authorID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 
     public Integer getAuthorID() {
         return authorID;

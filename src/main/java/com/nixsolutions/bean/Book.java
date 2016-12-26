@@ -16,23 +16,6 @@ public class Book {
     private Integer bookRate;
     private Integer numberOfReadings;
 
-    public Book(Long bookID, String bookName, Integer authorID, Integer publishingHouseID, Integer genreID,
-                Integer yearOfIssue, Integer languageID, String bookDescription, Integer bookQuantity,
-                Integer bookInWarehouse, Integer shelfID, Integer bookRate, Integer numberOfReadings) {
-        this.bookID = bookID;
-        this.bookName = bookName;
-        this.authorID = authorID;
-        this.publishingHouseID = publishingHouseID;
-        this.genreID = genreID;
-        this.yearOfIssue = yearOfIssue;
-        this.languageID = languageID;
-        this.bookDescription = bookDescription;
-        this.bookQuantity = bookQuantity;
-        this.bookInWarehouse = bookInWarehouse;
-        this.shelfID = shelfID;
-        this.bookRate = bookRate;
-        this.numberOfReadings = numberOfReadings;
-    }
 
     public Long getBookID() {
         return bookID;

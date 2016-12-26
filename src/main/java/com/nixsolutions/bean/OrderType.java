@@ -5,10 +5,7 @@ public class OrderType {
     private Integer orderTypeID;
     private String orderType;
 
-    public OrderType(Integer orderTypeID, String orderType) {
-        this.orderTypeID = orderTypeID;
-        this.orderType = orderType;
-    }
+
 
     public Integer getOrderTypeID() {
         return orderTypeID;

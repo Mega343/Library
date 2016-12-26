@@ -14,15 +14,6 @@ public class Document {
     private Date dateOfIssue;
     private Clob documentImage;
 
-    public Document(Integer documentID, Integer documentTypeID, String series, Integer number, String issuedBy, Date dateOfIssue, Clob documentImage) {
-        this.documentID = documentID;
-        this.documentTypeID = documentTypeID;
-        this.series = series;
-        this.number = number;
-        this.issuedBy = issuedBy;
-        this.dateOfIssue = dateOfIssue;
-        this.documentImage = documentImage;
-    }
 
     public Integer getDocumentID() {
         return documentID;

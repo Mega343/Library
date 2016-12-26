@@ -11,9 +11,9 @@ public interface OrderTypeDAO {
 
     public void edit(OrderType orderType);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public OrderType getOrderType(int id);
+    public OrderType getOrderType(Integer id);
 
     public List<OrderType> getAllOrderTypes();
 }

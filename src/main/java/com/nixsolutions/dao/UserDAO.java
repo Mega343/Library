@@ -10,13 +10,13 @@ public interface UserDAO {
 
     public void edit(User user);
 
-    public void delete(int id);
+    public void delete(Long id);
 
-    public User getUser(int id);
+    public User getUser(Long id);
 
     public List<User> searchByFirstName(String firstName);
 
-    public User searchByEmail(User user);
+    public User searchByEmail(String email);
 
     public List<User> getAllUsers();
 

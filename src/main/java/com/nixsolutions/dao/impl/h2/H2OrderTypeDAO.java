@@ -17,12 +17,12 @@ public class H2OrderTypeDAO implements OrderTypeDAO{
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public OrderType getOrderType(int id) {
+    public OrderType getOrderType(Integer id) {
         return null;
     }
 

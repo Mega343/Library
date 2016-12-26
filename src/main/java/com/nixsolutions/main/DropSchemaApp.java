@@ -24,6 +24,7 @@ public class DropSchemaApp {
 
         try {
             String[] properties = reader.getProperties(FILE_PROPERTIES);
+            Class.forName("org.h2.Driver");
             connection = DriverManager.getConnection(properties[0], properties[1], properties[2]);
             statement = connection.createStatement();
 

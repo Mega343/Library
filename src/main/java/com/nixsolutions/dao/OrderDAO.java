@@ -12,13 +12,13 @@ public interface OrderDAO {
 
     public void edit(Order order);
 
-    public void delete(int id);
+    public void delete(Long id);
 
-    public Order getOrder(int id);
+    public Order getOrder(Long id);
 
     public List<Order> searchByOderDate(Date orderDate);
 
-    public List<Order> searchByUser(int id);
+    public List<Order> searchByUser(Long id);
 
     public List<Order> getAllOrders();
 }

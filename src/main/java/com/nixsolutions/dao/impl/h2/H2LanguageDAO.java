@@ -17,12 +17,12 @@ public class H2LanguageDAO implements LanguageDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Language getLanguage(int id) {
+    public Language getLanguage(Integer id) {
         return null;
     }
 

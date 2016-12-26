@@ -17,17 +17,17 @@ public class H2ShelfDAO implements ShelfDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Shelf getShelf(int id) {
+    public Shelf getShelf(Integer id) {
         return null;
     }
 
     @Override
-    public List<Shelf> getAllShelfs() {
+    public List<Shelf> getAllShelves() {
         return null;
     }
 }

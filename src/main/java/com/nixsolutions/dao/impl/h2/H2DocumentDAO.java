@@ -15,12 +15,12 @@ public class H2DocumentDAO implements DocumentDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Document getDocument(int id) {
+    public Document getDocument(Integer id) {
         return null;
     }
 }

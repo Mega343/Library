@@ -6,10 +6,6 @@ public class City {
     private Integer cityID;
     private String cityName;
 
-    public City(Integer cityID, String cityName) {
-        this.cityID = cityID;
-        this.cityName = cityName;
-    }
 
     public Integer getCityID() {
         return cityID;

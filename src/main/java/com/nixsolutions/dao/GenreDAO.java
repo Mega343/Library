@@ -10,9 +10,9 @@ public interface GenreDAO {
 
     public void edit(Genre genre);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Genre getGere(int id);
+    public Genre getGenre(Integer id);
 
     public List<Genre> getAllGenres();
 }

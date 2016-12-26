@@ -17,12 +17,12 @@ public class H2PublishingHouseDAO implements PublishingHouseDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public PublishingHouse getPublishingHouse(int id) {
+    public PublishingHouse getPublishingHouse(Integer id) {
         return null;
     }
 

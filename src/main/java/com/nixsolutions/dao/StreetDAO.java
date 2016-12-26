@@ -10,9 +10,9 @@ public interface StreetDAO {
 
     public void edit(Street street);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Street getStreet(int id);
+    public Street getStreet(Integer id);
 
     public List<Street> getAllStreets();
 }

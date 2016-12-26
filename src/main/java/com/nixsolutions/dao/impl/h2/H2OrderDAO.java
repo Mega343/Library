@@ -18,12 +18,12 @@ public class H2OrderDAO implements OrderDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
 
     }
 
     @Override
-    public Order getOrder(int id) {
+    public Order getOrder(Long id) {
         return null;
     }
 
@@ -33,7 +33,7 @@ public class H2OrderDAO implements OrderDAO {
     }
 
     @Override
-    public List<Order> searchByUser(int id) {
+    public List<Order> searchByUser(Long id) {
         return null;
     }
 

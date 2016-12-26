@@ -6,11 +6,6 @@ public class Address {
     private String houseNumber;
     private String flatNumber;
 
-    public Address(Long address_id, String houseNumber, String flatNumber) {
-        this.address_id = address_id;
-        this.houseNumber = houseNumber;
-        this.flatNumber = flatNumber;
-    }
 
     public Long getAddress_id() {
         return address_id;

@@ -11,9 +11,9 @@ public interface RoleDAO {
 
     public void edit(Role role);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Role getRole(int id);
+    public Role getRole(Integer id);
 
     public List<Role> getAllRoles();
 }

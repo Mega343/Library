@@ -6,11 +6,7 @@ public class Street {
     private String streetName;
     private Integer cityID;
 
-    public Street(Long streetID, String streetName, Integer cityID) {
-        this.streetID = streetID;
-        this.streetName = streetName;
-        this.cityID = cityID;
-    }
+
 
     public Long getStreetID() {
         return streetID;

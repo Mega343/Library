@@ -10,9 +10,9 @@ public interface AuthorDAO {
 
     public void edit(Author author);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public Author getAuthor(int id);
+    public Author getAuthor(Integer id);
 
     public List<Author> searchByName(String firstName);
 

@@ -17,12 +17,12 @@ public class H2AuthorDAO implements AuthorDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Author getAuthor(int id) {
+    public Author getAuthor(Integer id) {
         return null;
     }
 

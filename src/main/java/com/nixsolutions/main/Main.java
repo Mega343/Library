@@ -11,9 +11,6 @@ import java.sql.Statement;
 
 public class Main implements Runnable {
     private static String fileProperties = "h2db.properties";
-    static Statement statement;
-    static Connection connection;
-
 
     public static void main(String[] args) throws Exception {
 
@@ -94,34 +91,23 @@ public class Main implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + " start work");
+        ReadProperties reader = new ReadProperties();
+        String[] properties = new String[0];
         try {
-            ReadProperties reader = new ReadProperties();
-            String[] properties = reader.getProperties(fileProperties);
-            connection = H2ConnectionManager.getConnection(properties[0], properties[1], properties[2]);
-            statement = connection.createStatement();
+            properties = reader.getProperties(fileProperties);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (Connection connection = H2ConnectionManager.getConnection(properties[0], properties[1], properties[2]);
+             Statement statement = connection.createStatement()) {
+
             statement.execute("INSERT INTO role (user_role) VALUES ('Reader')");
             System.out.println(Thread.currentThread().getName() + " end work");
+
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            if(statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException e) {
-
-                }
-            } if (connection != null){
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-
-                }
-            }
         }
-
     }
 }

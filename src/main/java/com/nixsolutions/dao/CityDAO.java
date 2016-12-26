@@ -10,9 +10,9 @@ public interface CityDAO {
 
     public void edit(City city);
 
-    public void delete(int id);
+    public void delete(Integer id);
 
-    public City getCity(int id);
+    public City getCity(Integer id);
 
     public List<City> getAllCities();
 }

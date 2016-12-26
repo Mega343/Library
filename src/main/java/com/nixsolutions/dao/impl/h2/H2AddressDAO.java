@@ -15,12 +15,12 @@ public class H2AddressDAO implements AddressDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 
     @Override
-    public Address getAddress(int id) {
+    public Address getAddress(Integer id) {
         return null;
     }
 }
